@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import AddTask from "./components/AddNewTask";
+import EditTask from "./components/EditTask";
+import TaskManagerMain from "./components/TaskManagerMain";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
 function App() {
+  const route = createBrowserRouter([
+    {
+      path: "/",
+      element: <TaskManagerMain />,
+    },
+    {
+      path: "/AddTask",
+      element: <AddTask />,
+    },
+    {
+      path: "/Update/:id",
+      element: <EditTask />,
+    },
+  ]);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Toaster />
+      <RouterProvider router={route}></RouterProvider>
     </div>
   );
 }

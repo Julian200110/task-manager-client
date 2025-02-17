@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.task-manager {
+  width: fit-content;
+  background-color: #1a1a40;
+  padding: 1rem 1rem 2rem 2rem;
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.task-manager__search-input {
+  width: 95%;
+  height: 30px;
+  font-size: 15px;
+  color: black;
+  border-radius: 10px;
+  padding: 0.3rem;
+}
+
+.task-manager__filters {
+  display: flex;
+  gap: 4rem;
+}
+
+.task-manager__status-filter {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-manager__card {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(20deg, rgb(110, 47, 225), rgb(97, 146, 206));
+  border-radius: 1rem;
+  padding: 0.2rem 1rem;
+  width: 400px;
+  gap: 1rem;
+}
+
+.task-manager__card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-manager__card-status-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.task-manager__card-status-circle--green {
+  background-color: rgb(0, 99, 0);
+}
+
+.task-manager__card-status-circle--orange {
+  background-color: rgb(228, 110, 0);
+}
+
+.task-manager__card-status-circle--red {
+  background-color: rgb(130, 11, 11);
+}
+
+.task-manager__card-description {
+  text-align: center;
+}
+
+.task-manager__card-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.task-manager__card-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.task-manager__add-task {
+  width: 150px;
+  height: 40px;
+  background: linear-gradient(20deg, rgb(41, 0, 116), rgb(28, 168, 255));
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-size: medium;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}

@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.task-manager__container-form {
+  width: 500px;
+  background-color: #1a1a40;
+  padding: 1rem 1rem 2rem 2rem;
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.task-manager__input-form {
+  width: 95%;
+  height: 30px;
+  font-size: 15px;
+  color: black;
+  border-radius: 10px;
+  padding: 0.3rem;
+  border: none;
+}
+
+.task-manager__select-status {
+  width: 97%;
+  height: 40px;
+  font-size: 15px;
+  color: black;
+  border-radius: 10px;
+  padding: 0.3rem;
+}
+
+.task-manager__select-status option {
+  color: black;
+  font-size: 15px;
+}
+.task-manager__buttons {
+  display: flex;
+  justify-content: space-around;
+}
+.task-manager__addtask {
+  width: 150px;
+  height: 40px;
+  background: linear-gradient(20deg, rgb(41, 0, 116), rgb(28, 168, 255));
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-size: medium;
+  margin: auto;
+}
+.task-manager__goback {
+  width: 150px;
+  height: 40px;
+  background: linear-gradient(20deg, rgb(138, 0, 0), rgb(136, 46, 46));
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-size: medium;
+  margin: auto;
+}
+.task-manager__add-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 15px;
+}
+
+.task-manager__input-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 5px;
+}
+
+.task-manager__label {
+  font-size: 20px;
+}
