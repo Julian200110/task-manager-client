@@ -27,7 +27,10 @@ const AddNewTask = () => {
     e.preventDefault();
     console.log(task);
     await axios
-      .post("http://3.95.151.67:8000/tasks/create", task)
+      .post(
+        "https://task-manager-server-c8360b2a15c3.herokuapp.com/tasks/create",
+        task
+      )
       .then((response) => {
         toast.success(response.data.message, { position: "top-right" });
         navigate("/");

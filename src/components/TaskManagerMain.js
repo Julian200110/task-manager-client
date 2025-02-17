@@ -18,7 +18,9 @@ const TaskManagerMain = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://3.95.151.67:8000/tasks/");
+        const response = await axios.get(
+          "https://task-manager-server-c8360b2a15c3.herokuapp.com/tasks/"
+        );
         setTasks(response.data);
       } catch (error) {
         console.log(error);
@@ -30,7 +32,9 @@ const TaskManagerMain = () => {
   // Function to delete a specific task by passing its Id as a parameter
   const deleteTask = async (taskId) => {
     await axios
-      .delete(`http://3.95.151.67:8000/tasks/delete/${taskId}`)
+      .delete(
+        `https://task-manager-server-c8360b2a15c3.herokuapp.com/tasks/delete/${taskId}`
+      )
       .then((response) => {
         setTasks((prevTask) => prevTask.filter((task) => task._id !== taskId));
         toast.success(response.data.message, { position: "top-right" });

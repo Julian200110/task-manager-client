@@ -25,7 +25,9 @@ const EditTask = () => {
   // Function to fetch task data from the server and set it in the state
   useEffect(() => {
     axios
-      .get(`http://3.95.151.67:8000/tasks/task/${id}`)
+      .get(
+        `https://task-manager-server-c8360b2a15c3.herokuapp.com/tasks/task/${id}`
+      )
       .then((response) => {
         setTask(response.data);
       })
@@ -36,7 +38,10 @@ const EditTask = () => {
     e.preventDefault();
     console.log(task);
     await axios
-      .put(`http://3.95.151.67:8000/tasks/update/${id}`, task)
+      .put(
+        `https://task-manager-server-c8360b2a15c3.herokuapp.com/tasks/update/${id}`,
+        task
+      )
       .then((response) => {
         toast.success(response.data.message, { position: "top-right" });
         navigate("/");
